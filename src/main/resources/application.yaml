@@ -1,1 +1,8 @@
-
+server:
+  port: 9991
+spring:
+  data:
+    mongodb:
+      host: mongodb://root:password@localhost:27017/doc-demo?authSource=admin&authMechanism=MONGODB-CR
+      database: doc-demo
+      port: 27017
