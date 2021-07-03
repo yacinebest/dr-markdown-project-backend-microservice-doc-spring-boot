@@ -1,8 +1,8 @@
 server:
-  port: 9991
+  port: ${SERVER_PORT:9991}
 spring:
   data:
     mongodb:
-      host: mongodb://root:password@mongo-drmarkdown/doc-prod?authSource=admin&authMechanism=MONGODB-CR
-      database: doc-prod
-      port: 27017
+      host: mongodb://${DB_USERNAME:root}:${DB_PASSWORD:password}@${DB_HOST:localhost}/${DB_NAME:doc-prod}?authSource=admin&authMechanism=MONGODB-CR
+      database: ${DB_NAME:doc-prod}
+      port: ${DB_PORT:27017}
